@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .news-title {
+            margin-bottom: 15px;
+            color: #007bff;
+            font-size: 20px;
+        }
+        .news-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Son Dakika Haberleri
+    </header>
+        {% for news_item in news_list %}
+        <div class="container">
+        <h2>{{ news_item.title }}</h2>
+        <img class="news-image" src="{{ news_item.image_link }}" alt="News Image">
+        <p>{{ news_item.description }}</p>
+        <a href="{{ news_item.url }}">Devamını oku</a>
+        </div>
+        {% endfor %}
+    <footer>
+        &copy; 2023 News Portal
+    </footer>
+</body>
+</html>

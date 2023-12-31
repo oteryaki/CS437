@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "title": "Sample News 1",
+      "image_link": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
+      "description": "This is a sample news article.",
+      "url": "https://example.com/news/1"
+    },
+    {
+      "title": "Sample News 2",
+      "image_link": "https://cdn.pixabay.com/photo/2016/11/29/04/17/architecture-1867187_960_720.jpg",
+      "description": "Another example news article.",
+      "url": "https://example.com/news/2"
+    },
+    {
+      "title": "Sample News 3",
+      "image_link": "https://cdn.pixabay.com/photo/2017/08/01/20/06/storm-2567670_960_720.jpg",
+      "description": "Yet another sample news article.",
+      "url": "https://example.com/news/3"
+    }
+  ]
+}
