@@ -27,9 +27,6 @@ file_handler.setFormatter(formatter)
 # Add the handler to logger2
 logger2.addHandler(file_handler)
 
-# Example usage of logger2
-logger2.info("This is an info message")
-
 
 def analyze_injection_attempts(request_data):
     """
@@ -70,14 +67,41 @@ def analyze_injection_attempts(request_data):
 
 @app.route('/APInews', methods=['GET'])
 def download_file():
+    """
+    This is the APInews which downloads xml files using RSS feeds. It also returns an JSON object in the given sample
+    format which is used by APIoriginal.
+
+    {
+  "news": [
+    {
+      "title": "Sample News 1",
+      "image_link": "https://example.com/image1.jpg",
+      "description": "This is a sample news article.",
+      "url": "https://example.com/news/1"
+    },
+    {
+      "title": "Sample News 2",
+      "image_link": "https://example.com/image2.jpg",
+      "description": "Another example news article.",
+      "url": "https://example.com/news/2"
+    }
+  ]
+}
+
+    """
+
+    # variables used in logging
     client_ip = request.remote_addr
     user_agent = request.user_agent.string
     url = request.args.get('url')
+
+    # checking if a valid url is provided
     if not url:
         logging.info(f"No URL provided - Client IP: {client_ip}, User Agent: {user_agent}")
         return "No URL provided", 400
     injection_attempt = analyze_injection_attempts(url)
 
+    # naming for the downloaded xml files
     domain = urlparse(url).netloc.split('.')[1]
     timestamp = time.time()
     domain = domain + str(timestamp)
@@ -85,11 +109,15 @@ def download_file():
 
     file_path = os.path.join('data', f"{domain}.xml")
 
+    # this is where command injection occurs
     command = f"curl -o \"{file_path}\" \"{url}\""
+
+    # logging in case of an injection
     if injection_attempt:
         logger2.info(f"Executing command: {command} - Client IP: {client_ip}, User Agent: {user_agent}")
         logger2.warning(f"Command injection attempt detected: Pattern '{injection_attempt}' in URL '{url}'")
 
+    # logging in all cases
     logging.info(f"Executing command: {command} - Client IP: {client_ip}, User Agent: {user_agent}")
     os.system(command)
 
@@ -97,12 +125,16 @@ def download_file():
     return jsonify(process_xml_files())
 
 
+# it is used for hosting malicious xml files in order to demonstrate the injection scenario
 @app.route('/myxmlfile')
 def serve_xml_file():
     return send_from_directory('', 'malicious_data.xml')
 
 
 def process_xml_files():
+    """
+    it reads the xml files, parse them and create the JSON object to return in the format that we expect.
+    """
     news_list = []
 
     for filename in os.listdir('data'):

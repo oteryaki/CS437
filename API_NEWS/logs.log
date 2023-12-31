@@ -43,3 +43,130 @@
 2023-12-31 21:02:31,224:WARNING: * Debugger is active!
 2023-12-31 21:02:31,236:INFO: * Debugger PIN: 653-182-549
 2023-12-31 21:02:33,527:INFO:127.0.0.1 - - [31/Dec/2023 21:02:33] "GET /myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:14:38,850:INFO:This is an info message
+2023-12-31 21:14:38,861:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-31 21:14:38,861:INFO:[33mPress CTRL+C to quit[0m
+2023-12-31 21:14:38,866:INFO: * Restarting with stat
+2023-12-31 21:14:39,127:INFO:This is an info message
+2023-12-31 21:14:39,133:WARNING: * Debugger is active!
+2023-12-31 21:14:39,145:INFO: * Debugger PIN: 653-182-549
+2023-12-31 21:15:15,480:INFO:127.0.0.1 - - [31/Dec/2023 21:15:15] "[36mGET /myxmlfile HTTP/1.1[0m" 304 -
+2023-12-31 21:15:43,435:INFO:Executing command: curl -o "data/01704046543.4353359.xml" "http://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:15:43,465:INFO:127.0.0.1 - - [31/Dec/2023 21:15:43] "GET /myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:15:43,467:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:15:43,477:INFO:127.0.0.1 - - [31/Dec/2023 21:15:43] "GET /APInews?url=http://127.0.0.1:5000/myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:19:18,006:INFO:Executing command: curl -o "data/cumhuriyet1704046758.006149.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:19:18,261:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:19:18,266:INFO:127.0.0.1 - - [31/Dec/2023 21:19:18] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml HTTP/1.1" 200 -
+2023-12-31 21:20:46,393:INFO:Executing command: curl -o "data/cumhuriyet1704046846.393286.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:20:46,409:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile;'
+2023-12-31 21:20:46,409:INFO:Executing command: curl -o "data/cumhuriyet1704046846.393286.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:20:46,423:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:20:46,430:INFO:127.0.0.1 - - [31/Dec/2023 21:20:46] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;%20rm%20-rf%20data/*%20;%20curl%20-o%20malicious.xml%20http://127.0.0.1:5000/myxmlfile; HTTP/1.1" 200 -
+2023-12-31 21:21:11,385:INFO:Executing command: curl -o "data/cumhuriyet1704046871.3849459.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:21:11,403:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile'
+2023-12-31 21:21:11,403:INFO:Executing command: curl -o "data/cumhuriyet1704046871.3849459.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml http://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:21:11,418:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:21:11,424:INFO:127.0.0.1 - - [31/Dec/2023 21:21:11] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;%20rm%20-rf%20data/*%20;%20curl%20-o%20malicious.xml%20http://127.0.0.1:5000/myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:22:07,817:INFO:Executing command: curl -o "data/cumhuriyet1704046927.8171809.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:07,836:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile'
+2023-12-31 21:22:07,836:INFO:Executing command: curl -o "data/cumhuriyet1704046927.8171809.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:07,851:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:07,856:INFO:127.0.0.1 - - [31/Dec/2023 21:22:07] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;%20rm%20-rf%20data/*%20;%20curl%20-o%20malicious.xml%20https://127.0.0.1:5000/myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:22:49,278:INFO:Executing command: curl -o "data/cumhuriyet1704046969.278521.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:49,296:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile'
+2023-12-31 21:22:49,296:INFO:Executing command: curl -o "data/cumhuriyet1704046969.278521.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml; rm -rf data/* ; curl -o malicious.xml https://127.0.0.1:5000/myxmlfile" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:49,311:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:22:49,314:INFO:127.0.0.1 - - [31/Dec/2023 21:22:49] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;%20rm%20-rf%20data/*%20;%20curl%20-o%20malicious.xml%20https://127.0.0.1:5000/myxmlfile HTTP/1.1" 200 -
+2023-12-31 21:26:11,268:INFO:Executing command: curl -o "data/cumhuriyet1704047171.268047.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:26:11,285:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;'
+2023-12-31 21:26:11,285:INFO:Executing command: curl -o "data/cumhuriyet1704047171.268047.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:26:11,302:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:26:11,306:INFO:127.0.0.1 - - [31/Dec/2023 21:26:11] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*;%20curl%20malicious.xml%20http://127.0.0.1:5000/myxmlfile; HTTP/1.1" 200 -
+2023-12-31 21:27:17,206:INFO:Executing command: curl -o "data/cumhuriyet1704047237.206409.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:17,214:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;'
+2023-12-31 21:27:17,214:INFO:Executing command: curl -o "data/cumhuriyet1704047237.206409.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*; curl malicious.xml http://127.0.0.1:5000/myxmlfile;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:17,230:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:17,236:INFO:127.0.0.1 - - [31/Dec/2023 21:27:17] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*;%20curl%20malicious.xml%20http://127.0.0.1:5000/myxmlfile; HTTP/1.1" 200 -
+2023-12-31 21:27:25,485:INFO:Executing command: curl -o "data/cumhuriyet1704047245.485131.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:25,492:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;'
+2023-12-31 21:27:25,493:INFO:Executing command: curl -o "data/cumhuriyet1704047245.485131.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:25,509:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:27:25,515:INFO:127.0.0.1 - - [31/Dec/2023 21:27:25] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*; HTTP/1.1" 200 -
+2023-12-31 21:28:02,650:INFO:Executing command: curl -o "data/cumhuriyet1704047282.650509.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*" - Client IP: 127.0.0.1, User Agent: WhatsApp/2.23.24.80 i
+2023-12-31 21:28:02,650:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*'
+2023-12-31 21:28:02,650:INFO:Executing command: curl -o "data/cumhuriyet1704047282.650509.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*" - Client IP: 127.0.0.1, User Agent: WhatsApp/2.23.24.80 i
+2023-12-31 21:28:02,665:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: WhatsApp/2.23.24.80 i
+2023-12-31 21:28:02,668:INFO:127.0.0.1 - - [31/Dec/2023 21:28:02] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/* HTTP/1.1" 200 -
+2023-12-31 21:37:35,643:INFO: * Detected change in '/Users/eneserkam/PycharmProjects/CS437/API_NEWS/api_news.py', reloading
+2023-12-31 21:37:35,698:INFO: * Restarting with stat
+2023-12-31 21:37:36,054:INFO:This is an info message
+2023-12-31 21:37:36,064:WARNING: * Debugger is active!
+2023-12-31 21:37:36,080:INFO: * Debugger PIN: 653-182-549
+2023-12-31 21:37:44,053:INFO:127.0.0.1 - - [31/Dec/2023 21:37:44] "[31m[1mGET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*; HTTP/1.1[0m" 405 -
+2023-12-31 21:38:06,284:INFO: * Detected change in '/Users/eneserkam/PycharmProjects/CS437/API_NEWS/api_news.py', reloading
+2023-12-31 21:38:06,337:INFO: * Restarting with stat
+2023-12-31 21:38:06,717:INFO:This is an info message
+2023-12-31 21:38:06,726:WARNING: * Debugger is active!
+2023-12-31 21:38:06,739:INFO: * Debugger PIN: 653-182-549
+2023-12-31 21:39:09,619:INFO:Executing command: curl -o "data/cumhuriyet1704047949.6193862.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:09,619:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;'
+2023-12-31 21:39:09,619:INFO:Executing command: curl -o "data/cumhuriyet1704047949.6193862.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:09,636:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:09,643:INFO:127.0.0.1 - - [31/Dec/2023 21:39:09] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*; HTTP/1.1" 200 -
+2023-12-31 21:39:32,541:INFO:This is an info message
+2023-12-31 21:39:32,556:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-31 21:39:32,557:INFO:[33mPress CTRL+C to quit[0m
+2023-12-31 21:39:32,561:INFO: * Restarting with stat
+2023-12-31 21:39:32,800:INFO:This is an info message
+2023-12-31 21:39:32,806:WARNING: * Debugger is active!
+2023-12-31 21:39:32,819:INFO: * Debugger PIN: 653-182-549
+2023-12-31 21:39:37,971:INFO:Executing command: curl -o "data/cumhuriyet1704047977.9717262.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:37,972:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;'
+2023-12-31 21:39:37,972:INFO:Executing command: curl -o "data/cumhuriyet1704047977.9717262.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:37,985:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:39:37,990:INFO:127.0.0.1 - - [31/Dec/2023 21:39:37] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*; HTTP/1.1" 200 -
+2023-12-31 21:40:08,390:INFO:Executing command: curl -o "data/cumhuriyet1704048008.3902621.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;cd data;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:08,408:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;cd data;'
+2023-12-31 21:40:08,408:INFO:Executing command: curl -o "data/cumhuriyet1704048008.3902621.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;cd data;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:08,424:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:08,427:INFO:127.0.0.1 - - [31/Dec/2023 21:40:08] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;cd%20data; HTTP/1.1" 200 -
+2023-12-31 21:40:25,013:INFO:Executing command: curl -o "data/cumhuriyet1704048025.0130591.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;ls;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:25,031:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;ls;'
+2023-12-31 21:40:25,031:INFO:Executing command: curl -o "data/cumhuriyet1704048025.0130591.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;ls;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:25,254:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:40:25,258:INFO:127.0.0.1 - - [31/Dec/2023 21:40:25] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;ls; HTTP/1.1" 200 -
+2023-12-31 21:41:42,191:INFO:Executing command: curl -o "data/cumhuriyet1704048102.191731.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:41:42,198:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;'
+2023-12-31 21:41:42,199:INFO:Executing command: curl -o "data/cumhuriyet1704048102.191731.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:41:42,215:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:41:42,222:INFO:127.0.0.1 - - [31/Dec/2023 21:41:42] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml;rm%20-rf%20data/*; HTTP/1.1" 200 -
+2023-12-31 21:42:53,376:INFO:Executing command: curl -o "data/cumhuriyet1704048173.376191.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:42:53,394:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml;'
+2023-12-31 21:42:53,394:INFO:Executing command: curl -o "data/cumhuriyet1704048173.376191.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:42:53,640:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 21:42:53,647:INFO:127.0.0.1 - - [31/Dec/2023 21:42:53] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml; HTTP/1.1" 200 -
+2023-12-31 22:02:46,305:INFO:Executing command: curl -o "data/cumhuriyet1704049366.3055658.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml";rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:02:46,314:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml";rm -rf data/*;'
+2023-12-31 22:02:46,332:INFO:Executing command: curl -o "data/cumhuriyet1704049366.3055658.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml";rm -rf data/*;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:02:46,341:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:02:46,347:INFO:127.0.0.1 - - [31/Dec/2023 22:02:46] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml";rm%20-rf%20data/*; HTTP/1.1" 200 -
+2023-12-31 22:03:20,701:INFO:Executing command: curl -o "data/cumhuriyet1704049400.70112.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml";ls;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:03:20,720:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/son_dakika.xml";ls;'
+2023-12-31 22:03:20,721:INFO:Executing command: curl -o "data/cumhuriyet1704049400.70112.xml" "https://www.cumhuriyet.com.tr/rss/son_dakika.xml";ls;" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:03:20,727:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-31 22:03:20,731:INFO:127.0.0.1 - - [31/Dec/2023 22:03:20] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/son_dakika.xml";ls; HTTP/1.1" 200 -
+2023-12-31 22:30:31,985:INFO: * Detected change in '/Users/eneserkam/PycharmProjects/CS437/API_NEWS/api_news.py', reloading
+2023-12-31 22:30:32,111:INFO: * Restarting with stat
+2023-12-31 22:30:32,688:WARNING: * Debugger is active!
+2023-12-31 22:30:32,704:INFO: * Debugger PIN: 653-182-549
+2023-12-31 22:35:48,643:INFO: * Detected change in '/Users/eneserkam/PycharmProjects/CS437/API_NEWS/api_news.py', reloading
+2023-12-31 22:35:48,691:INFO: * Restarting with stat
+2023-12-31 22:35:48,953:WARNING: * Debugger is active!
+2023-12-31 22:35:48,965:INFO: * Debugger PIN: 653-182-549
+2023-12-31 22:36:56,415:INFO: * Detected change in '/Users/eneserkam/PycharmProjects/CS437/API_NEWS/api_news.py', reloading
+2023-12-31 22:36:56,621:INFO: * Restarting with stat
+2023-12-31 22:36:57,004:WARNING: * Debugger is active!
+2023-12-31 22:36:57,032:INFO: * Debugger PIN: 653-182-549
