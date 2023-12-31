@@ -58,19 +58,25 @@
     </style>
 </head>
 <body>
+    <!-- Header section of the web page -->
     <header>
-        Son Dakika Haberleri
+        Son Dakika Haberleri <!-- This is the header text, translated as "Breaking News" -->
     </header>
-        {% for news_item in news_list %}
-        <div class="container">
-        <h2>{{ news_item.title }}</h2>
-        <img class="news-image" src="{{ news_item.image_link }}" alt="News Image">
-        <p>{{ news_item.description }}</p>
-        <a href="{{ news_item.url }}">Devamını oku</a>
-        </div>
-        {% endfor %}
+
+    <!-- Loop through each news item in the news_list -->
+    {% for news_item in news_list %}
+    <!-- Container for each news item -->
+    <div class="container">
+        <h2>{{ news_item.title }}</h2> <!-- Display the title of the news item -->
+        <img class="news-image" src="{{ news_item.image_link }}" alt="News Image"> <!-- Display the image of the news item -->
+        <p>{{ news_item.description }}</p> <!-- Display the description of the news item -->
+        <a href="{{ news_item.url }}">Devamını oku</a> <!-- Link to read more about the news item, text means "Read more" -->
+    </div>
+    {% endfor %} <!-- End of the loop -->
+
+    <!-- Footer section of the web page -->
     <footer>
-        &copy; 2023 News Portal
+        &copy; 2023 News Portal <!-- Footer text with copyright symbol and year -->
     </footer>
 </body>
 </html>
