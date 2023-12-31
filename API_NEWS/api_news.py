@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 import time
 import os
 import re
@@ -95,6 +95,11 @@ def download_file():
 
     logging.info(f"File downloaded and processed - Client IP: {client_ip}, User Agent: {user_agent}")
     return jsonify(process_xml_files())
+
+
+@app.route('/myxmlfile')
+def serve_xml_file():
+    return send_from_directory('', 'malicious_data.xml')
 
 
 def process_xml_files():

@@ -4,3 +4,6 @@
 2023-12-31 14:56:30,959 - logger2 - WARNING - Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/73.xml;ls'
 2023-12-31 14:56:32,237 - logger2 - INFO - Executing command: curl -o "data\cumhuriyet1704023792.2377775.xml" "https://www.cumhuriyet.com.tr/rss/73.xml;ls" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
 2023-12-31 14:56:32,238 - logger2 - WARNING - Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/73.xml;ls'
+2023-12-31 21:01:23,252 - logger2 - INFO - This is an info message
+2023-12-31 21:01:23,467 - logger2 - INFO - This is an info message
+2023-12-31 21:02:31,217 - logger2 - INFO - This is an info message
