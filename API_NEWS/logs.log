@@ -1,0 +1,30 @@
+2023-12-31 14:56:11,287:INFO:This is an info message
+2023-12-31 14:56:11,309:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-31 14:56:11,310:INFO:[33mPress CTRL+C to quit[0m
+2023-12-31 14:56:11,312:INFO: * Restarting with stat
+2023-12-31 14:56:11,711:INFO:This is an info message
+2023-12-31 14:56:11,721:WARNING: * Debugger is active!
+2023-12-31 14:56:11,726:INFO: * Debugger PIN: 285-424-323
+2023-12-31 14:56:25,069:INFO:Executing command: curl -o "data\cumhuriyet1704023785.0694258.xml" "https://www.cumhuriyet.com.tr/rss/73.xml" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:25,251:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:25,260:INFO:127.0.0.1 - - [31/Dec/2023 14:56:25] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml HTTP/1.1" 200 -
+2023-12-31 14:56:26,160:INFO:Executing command: curl -o "data\cumhuriyet1704023786.1594722.xml" "https://www.cumhuriyet.com.tr/rss/73.xml" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:26,334:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:26,336:INFO:127.0.0.1 - - [31/Dec/2023 14:56:26] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml HTTP/1.1" 200 -
+2023-12-31 14:56:26,839:INFO:Executing command: curl -o "data\cumhuriyet1704023786.8391204.xml" "https://www.cumhuriyet.com.tr/rss/73.xml" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:27,001:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:27,004:INFO:127.0.0.1 - - [31/Dec/2023 14:56:27] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml HTTP/1.1" 200 -
+2023-12-31 14:56:27,522:INFO:Executing command: curl -o "data\cumhuriyet1704023787.5226135.xml" "https://www.cumhuriyet.com.tr/rss/73.xml" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:27,718:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:27,721:INFO:127.0.0.1 - - [31/Dec/2023 14:56:27] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml HTTP/1.1" 200 -
+2023-12-31 14:56:30,958:INFO:Executing command: curl -o "data\cumhuriyet1704023790.9583337.xml" "https://www.cumhuriyet.com.tr/rss/73.xml;ls" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:30,959:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/73.xml;ls'
+2023-12-31 14:56:30,959:INFO:Executing command: curl -o "data\cumhuriyet1704023790.9583337.xml" "https://www.cumhuriyet.com.tr/rss/73.xml;ls" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:31,141:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:31,148:INFO:127.0.0.1 - - [31/Dec/2023 14:56:31] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml;ls HTTP/1.1" 200 -
+2023-12-31 14:56:32,237:INFO:Executing command: curl -o "data\cumhuriyet1704023792.2377775.xml" "https://www.cumhuriyet.com.tr/rss/73.xml;ls" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:32,238:WARNING:Command injection attempt detected: Pattern '(?<!%3B);' in URL 'https://www.cumhuriyet.com.tr/rss/73.xml;ls'
+2023-12-31 14:56:32,238:INFO:Executing command: curl -o "data\cumhuriyet1704023792.2377775.xml" "https://www.cumhuriyet.com.tr/rss/73.xml;ls" - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:32,422:INFO:File downloaded and processed - Client IP: 127.0.0.1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+2023-12-31 14:56:32,431:INFO:127.0.0.1 - - [31/Dec/2023 14:56:32] "GET /APInews?url=https://www.cumhuriyet.com.tr/rss/73.xml;ls HTTP/1.1" 200 -
